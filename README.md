@@ -18,7 +18,7 @@ This project explores physical collaboration between robots in a heterogeneous, 
 
 *Renderings of a heterogeneous robot team operating together.*
 
-An early proof-of-concept demonstrated this directly: a wheeled robot, initially unable to move under an applied load, regains motion once a drone lifts a portion of that weight, reducing static friction enough for the robot to drive forward. As part of this work, I calibrated a RadioLink drone using ArduPilot and delivered a multi-robot coordination demonstration to the Army Research Lab.
+An early proof-of-concept demonstrated this directly: a wheeled robot, initially unable to move under an applied load, regains motion once a drone lifts a portion of that weight, reducing static friction enough for the robot to drive forward. As part of this work, I calibrated a RadioLink drone using ArduPilot and delivered a multi-robot coordination demonstration and presentation to the Army Research Lab.
 
 <!-- PROOF OF CONCEPT VIDEO -->
 https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888
