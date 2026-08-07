@@ -45,9 +45,9 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
-*Chassis assembly. The chassis was machined from aluminum.*
+*Pictured above is the chassis assembly. The chassis was machined from aluminum using angle grinder and drill press.*
 
-<img src="assets/rover-chassis-lid.jpg" width="55%" />
+<img src="assets/ROVERwithLID2.jpeg" width="40%" />
 
 *Chassis with lid attached.*
 
@@ -57,7 +57,7 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 <img src="assets/MotorMounting.jpeg" width="40%" />
 
-*Motor mounting. Mounting holes were drill pressed directly into the aluminum chassis.*
+*Mounting holes were drill pressed directly into the aluminum chassis and motors were bolted to chassis.*
 
 **Battery Holder & ESC Mounts**
 
