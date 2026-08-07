@@ -20,8 +20,9 @@ This project explores physical collaboration between robots in a heterogeneous, 
 
 An early proof-of-concept demonstrated this directly: a wheeled robot, initially unable to move under an applied load, regains motion once a drone lifts a portion of that weight, reducing static friction enough for the robot to drive forward. This concept was presented to the Army Research Lab.
 
+
 <!-- PROOF OF CONCEPT VIDEO -->
-<!-- [drag video file into editor here] -->
+<[https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888]>
 
 Building on that proof of concept, the current phase of the project is the wheeled rover itself, a purpose-built platform designed not just to move independently, but to physically pull and be pulled by other robots in the team. The sections below cover that build.
 
