@@ -12,7 +12,7 @@
 
 ## Overview
 
-This project explores physical collaboration between robots in a heterogeneous, off-road team, specifically, how robots with different capabilities can support each other to move across terrain that would stop any one of them alone. The core idea: a wheeled robot can get stuck when it doesn't have enough traction to move, but if another team member (in this case, a drone) can reduce the load on it, even briefly, the robot regains enough traction to keep moving.
+This project explores physical collaboration between robots in a heterogeneous, off-road team, specifically, how robots with different capabilities can support each other to move across terrain that would stop any one of them alone. The core idea: each robot in the team has different strengths, and by working together, they can lean on each other's strengths in situations where their own platform falls short, letting the team perform beyond what any single robot could do alone.
 
 <img src="assets/robot-team-render-1.png" width="49%" /> <img src="assets/robot-team-render-2.png" width="49%" />
 
