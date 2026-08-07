@@ -41,18 +41,48 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 ## Fabrication
 
+**Chassis**
+
 https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 *Chassis assembly. The chassis was machined from aluminum.*
 
+<img src="assets/rover-chassis-lid.jpg" width="55%" />
+
+*Chassis with lid attached.*
+
 The chassis was manufactured in aluminum based on the CAD design above. All machining was done in-house as part of the build.
+
+**Motor Mounting**
 
 <img src="assets/MotorMounting.jpeg" width="40%" />
 
+*Motor mounting. Mounting holes were drill pressed directly into the aluminum chassis.*
+
+**Battery Holder & ESC Mounts**
+
+<img src="assets/battery-esc-mount-cad.png" width="55%" /> <img src="assets/battery-esc-mount-printed.jpg" width="39%" />
+
+*CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the chassis.*
+
+**Wheel Attachment**
+
+<img src="assets/wheel-attachment-render.png" width="55%" />
+
+*Rendering of the wheel attachment design. The mating piece was lathed to attach to the wheel; wheel installation is in progress.*
 
 ## Electronics & Testing
 
-With the chassis built, the electrical build followed in this order: motors installed onto the chassis, full system wiring completed, ESC (electronic speed controller) holders built and mounted, and ground/signal wires soldered onto the ESCs. Controller responsiveness was then tested to confirm the drivetrain responds correctly to input before moving on to sensing and autonomy.
+The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.
+
+With wiring complete, the ESCs were configured, and the signal and ground wires were soldered onto the receiver pins to enable motor control testing with a receiver/transmitter pair.
+
+<!-- DEMO VIDEO: wheels turning under receiver/transmitter control -->
+<!-- [drag video file into editor here] -->
+
+*Demo: motor control test showing the wheels turning under receiver/transmitter input.*
+
+Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
 
 <details>
 <summary><strong>Coming soon: wheels, LiDAR & autonomy (click to expand)</strong></summary>
@@ -74,9 +104,3 @@ This section will be updated with photos, video, and results once that stage is 
 The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. Wheels, LiDAR, and Raspberry Pi-based optical detection are the immediate next steps.
 
 ## Future Work
-
-- **Wheel mounting** and drivetrain integration
-- **LiDAR-based terrain sensing**
-- **Raspberry Pi optical detection** for basic obstacle/object recognition
-- **Autonomous navigation** within the broader heterogeneous robot team
-- **Field testing** of pull/tow capability with other team members
