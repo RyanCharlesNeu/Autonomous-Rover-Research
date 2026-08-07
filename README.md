@@ -41,7 +41,7 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 ## Fabrication
 
-<img src="assets/rover-chassis-assembly.jpg" width="70%" />
+https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 *Chassis assembly. The chassis was machined from aluminum.*
 
