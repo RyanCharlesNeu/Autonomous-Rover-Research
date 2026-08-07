@@ -1,18 +1,35 @@
-# Autonomous Rover Research
+## Autonomous Rover
 **Wheeled Rover for Collaborative Off-Road Robot Teams**
 <br>
 **L3Harris HAV Lab**
 <br>
 **Advisor: Dr. Sun**
+<br>
+**Role: Undergraduate Research Assistant**
 
 <!-- HERO IMAGE: full rover photo or render -->
 <img src="assets/rover-hero.jpg" width="40%" />
 
 ## Overview
 
-This project is an autonomous wheeled rover designed to operate as part of a heterogeneous, off-road robot team. Unlike a standalone rover, this design has to do double duty: it needs to move independently across rough terrain, and it needs to be able to physically pull and be pulled by other robots in the team. That second requirement drove the entire design process, since it meant the chassis, motors, and drivetrain all had to be sized around real towing loads, not just the rover's own weight.
+This project explores physical collaboration between robots in a heterogeneous, off-road team, specifically, how robots with different capabilities can support each other to move across terrain that would stop any one of them alone. The core idea: a wheeled robot can get stuck when it doesn't have enough traction to move, but if another team member (in this case, a drone) can reduce the load on it, even briefly, the robot regains enough traction to keep moving.
 
-The sections below walk through the build in the order it actually happened: from load calculations, to CAD, to fabrication, to the current state of the electronics.
+<img src="assets/robot-team-render-1.png" width="49%" /> <img src="assets/robot-team-render-2.png" width="49%" />
+
+*Renderings of a heterogeneous robot team operating together.*
+
+An early proof-of-concept demonstrated this directly: a wheeled robot, initially unable to move under an applied load, regains motion once a drone lifts a portion of that weight, reducing static friction enough for the robot to drive forward. This concept was presented to the Army Research Lab.
+
+<!-- PROOF OF CONCEPT VIDEO -->
+<!-- [drag video file into editor here] -->
+
+Building on that proof of concept, the current phase of the project is the wheeled rover itself, a purpose-built platform designed not just to move independently, but to physically pull and be pulled by other robots in the team. The sections below cover that build.
+
+## Research Program
+
+This work sits within a broader research effort, **Autonomous Vehicle Coordination on Complex Terrains**, developing a multi-modality UGV-UAV team (wheeled, tracked, and legged ground robots, plus an aerial drone) that uses physical coordination and joint path planning to traverse terrain no single platform could cross alone.
+
+My part in this: build and autonomize the wheeled rover first, then extend autonomy to a legged platform, then develop a mechanism that lets robots physically connect and push or pull each other autonomously.
 
 ## Design & CAD
 
