@@ -47,6 +47,9 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 The chassis was manufactured in aluminum based on the CAD design above. All machining was done in-house as part of the build.
 
+<img src="assets/MotorMounting.jpeg" width="40%" />
+
+
 ## Electronics & Testing
 
 With the chassis built, the electrical build followed in this order: motors installed onto the chassis, full system wiring completed, ESC (electronic speed controller) holders built and mounted, and ground/signal wires soldered onto the ESCs. Controller responsiveness was then tested to confirm the drivetrain responds correctly to input before moving on to sensing and autonomy.
