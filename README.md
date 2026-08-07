@@ -1,4 +1,4 @@
-# Autonomous-Rover-Research
+# Autonomous Rover Research
 **Wheeled Rover for Collaborative Off-Road Robot Teams**
 <br>
 **L3Harris HAV Lab**
