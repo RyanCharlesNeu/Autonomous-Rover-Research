@@ -22,7 +22,7 @@ An early proof-of-concept demonstrated this directly: a wheeled robot, initially
 
 
 <!-- PROOF OF CONCEPT VIDEO -->
-<[https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888]>
+https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888
 
 Building on that proof of concept, the current phase of the project is the wheeled rover itself, a purpose-built platform designed not just to move independently, but to physically pull and be pulled by other robots in the team. The sections below cover that build.
 
