@@ -108,7 +108,7 @@ Before trusting this under full driving load, the plan is to validate it with a 
 
 <img src="assets/IMG_1217.jpeg" width="39%" />
 
-*Wiring complete, with ESCs, receiver, and power connections in place ahead of configuration and testing.*
+*ESC Configuration with VESC Tool.*
 
 https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7
 
