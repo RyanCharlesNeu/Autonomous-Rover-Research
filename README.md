@@ -67,10 +67,9 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 **Wheel Attachment**
 
-<img src="assets/wheel-attachment-render.png" width="55%" />
+<img src="assets/LatheCropped.jpeg" width="45%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/Lathe.jpeg" width="35%" />
 
-*Rendering of the wheel attachment design. The mating piece was lathed to attach to the wheel; wheel installation is in progress.*
-
+*The lathed wheel attachment component (left), machined on the lathe shown (right).*
 ## Electronics & Testing
 
 The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.
