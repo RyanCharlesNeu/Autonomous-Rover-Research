@@ -52,6 +52,8 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 ## Fabrication
 
+This build was fabricated in-house using an angle grinder, drill press, lathe, 3D printer (PETG parts), and soldering iron. Lock nuts are used throughout to account for vibration during operation.
+
 #### Chassis
 
 https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
@@ -75,6 +77,8 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 <img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
 
 *CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the bottom plate of chassis.*
+
+The battery mount uses M5 bolts (32 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit tolerance to seat the ESCs securely while allowing for removal.
 
 <img src="assets/IMG_1199.jpeg" width="39%" />
 
