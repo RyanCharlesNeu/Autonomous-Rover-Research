@@ -8,13 +8,14 @@
 **Role: Undergraduate Research Assistant**
 
 <!-- HERO IMAGE: full rover photo or render -->
-<img src="assets/rover-hero.jpg" width="40%" />
+<img src="assets/RoverRender.png" width="55%" />
+*CAD rendering of the target rover design.*
 
 ## Overview
 
 This project explores physical collaboration between robots in a heterogeneous, off-road team, specifically, how robots with different capabilities can support each other to move across terrain that would stop any one of them alone. The core idea: each robot in the team has different strengths, and by working together, they can lean on each other's strengths in situations where their own platform falls short, letting the team perform beyond what any single robot could do alone.
 
-<img src="assets/AutonomousRobotTeam.png" width="49%" />
+<img src="assets/AutonomousRobotTeam.png" width="60%" />
 
 *Renderings of a heterogeneous robot team operating together.*
 
