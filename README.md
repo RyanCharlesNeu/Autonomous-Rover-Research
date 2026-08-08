@@ -62,8 +62,6 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 *Completed chassis with lid attached, ready for component mounting.*
 
-The chassis was manufactured in aluminum based on the CAD design above. All machining was done in-house as part of the build.
-
 #### Motor Mounting
 
 <img src="assets/MotorMounting.jpeg" width="40%" />
