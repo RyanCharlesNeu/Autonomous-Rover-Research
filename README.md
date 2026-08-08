@@ -1,4 +1,4 @@
-# Autonomous Rover
+## Autonomous Rover
 **Wheeled Rover for Collaborative Off-Road Robot Teams**
 <br>
 **L3Harris HAV Lab**
@@ -43,6 +43,15 @@ My part in this: build and autonomize the wheeled rover first, then extend auton
 
 Before modeling anything, the rover's motor and material requirements were driven by the pull/be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
 
+<details>
+<summary><strong>FEA analysis (coming soon)</strong></summary>
+
+<br>
+
+Structural validation of key components via Ansys FEA will be added here once complete.
+
+</details>
+
 ## Fabrication
 
 **Chassis**
@@ -59,19 +68,33 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 **Motor Mounting**
 
-<img src="assets/MotorMounting.jpeg" width="40%" />
+<img src="assets/MotorMounting.jpeg" width="30%" />
 
 *Motor mounting. Mounting holes were drill pressed directly into the aluminum chassis, and the motors were bolted to the chassis.*
 
 **Battery Holder & ESC Mounts**
 
-<img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
+<img src="assets/Cad" width="30%" /> <img src="assets/ESC&BatteryMount.jpeg" width="30%" />
 
 *CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the chassis.*
 
-<img src="assets/IMG_1199.jpeg" width="39%" />
+<img src="assets/IMG_1199.jpeg" width="30%" />
 
 *Chassis with the ESC mounts installed and ESCs seated in place, ready for wiring.*
+
+**Wheel Attachment**
+
+Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform.
+
+<img src="assets/wheel-attachment-render.png" width="55%" />
+
+*Rendering of the outboard-bearing wheel attachment design: a custom machined adapter connects the motor shaft to the wheel hub, with a support bearing and standoff bracket carrying the wheel's load into the chassis wall rather than back into the motor.*
+
+<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="45%" />
+
+*The lathe used to machine the wheel attachment adapter (left), and the finished piece (right).*
+
+Before trusting this under full driving load, the plan is to validate it with a static side-load bench test, then a powered on-stand run test, confirming the calculated design holds up under real conditions.
 
 ## Electronics & Testing
 
@@ -95,12 +118,6 @@ https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 
 Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
 
-**Wheel Attachment**
-
-<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="45%" />
-
-*The lathe used to machine the wheel attachment component (left), and the finished piece (right).*
-
 <details>
 <summary><strong>Coming soon: wheels, LiDAR & autonomy (click to expand)</strong></summary>
 
@@ -118,6 +135,6 @@ This section will be updated with photos, video, and results once that stage is 
 
 ## Status
 
-The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. Wheels, LiDAR, and Raspberry Pi-based optical detection are the immediate next steps.
+The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The wheel attachment design has been analytically validated and machined; static and powered bench testing are the next steps before it's trusted under full load. Wheels, LiDAR, and Raspberry Pi-based optical detection are the immediate next steps.
 
 ## Future Work
