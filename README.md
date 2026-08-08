@@ -50,7 +50,7 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 ## Fabrication
 
-This build was fabricated in-house using an angle grinder, drill press, lathe, 3D printer (PETG parts), and soldering iron. Lock nuts are used throughout to account for vibration during operation.
+The rover was fabricated in Villanova's machine shop using an angle grinder, drill press, lathe, 3D printer (PETG parts), and soldering iron. Lock nuts are used throughout to account for vibration during operation.
 
 #### Chassis
 
