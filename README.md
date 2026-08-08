@@ -39,7 +39,7 @@ This work is part of a broader research effort, **Autonomous Cyber-Physical Vehi
 
 *Early CAD design of the rover chassis. This is an earlier iteration, not the final design, shown here to document the design process.*
 
-Before modeling anything, the rover's motor and material requirements were driven by the pull/be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
+Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
 
 | Component | Role | Spec | Photo |
 |---|---|---|---|
