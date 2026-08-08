@@ -31,9 +31,7 @@ Building on that proof of concept, the current phase of the project is the wheel
 
 ## Research Program
 
-This work sits within a broader research effort, **Autonomous Vehicle Coordination on Complex and Extreme Terrains**, developing a multi-modality UGV-UAV team (wheeled, tracked, and legged ground robots, plus an aerial drone) that uses physical coordination and joint path planning to traverse terrain no single platform could cross alone.
-
-My part in this: build and autonomize the wheeled rover first, then extend autonomy to a legged platform, then develop a mechanism that lets robots physically connect and push or pull each other autonomously.
+This work is part of a broader research effort, **Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains**. My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.
 
 ## Design & CAD
 
