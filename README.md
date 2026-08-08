@@ -1,4 +1,4 @@
-## Autonomous Rover
+# Autonomous Rover
 **Wheeled Rover for Collaborative Off-Road Robot Teams**
 <br>
 **L3Harris HAV Lab**
@@ -9,6 +9,7 @@
 
 <!-- HERO IMAGE: full rover photo or render -->
 <img src="assets/RoverRender.png" width="55%" />
+
 *CAD rendering of the target rover design.*
 
 ## Overview
@@ -23,6 +24,8 @@ An early proof-of-concept demonstrated this directly: a wheeled robot, initially
 
 <!-- PROOF OF CONCEPT VIDEO -->
 https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888
+
+*Proof-of-concept demo: a wheeled robot under load, initially unable to move, regains traction and drives forward once a drone lifts a portion of the weight.*
 
 Building on that proof of concept, the current phase of the project is the wheeled rover itself, a purpose-built platform designed not just to move independently, but to physically pull and be pulled by other robots in the team. The sections below cover that build.
 
@@ -44,13 +47,13 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 **Chassis**
 
-https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f 
+https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
-*Pictured above is the chassis assembly. The chassis was machined from aluminum using angle grinder and drill press.*
+*Chassis assembly, machined from aluminum using an angle grinder and drill press.*
 
 <img src="assets/ROVERwithLID2.jpeg" width="40%" />
 
-*Chassis with lid attached.*
+*Completed chassis with lid attached, ready for component mounting.*
 
 The chassis was manufactured in aluminum based on the CAD design above. All machining was done in-house as part of the build.
 
@@ -58,39 +61,37 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 <img src="assets/MotorMounting.jpeg" width="40%" />
 
-*Mounting holes were drill pressed directly into the aluminum chassis and motors were bolted to chassis.*
+*Motor mounting. Mounting holes were drill pressed directly into the aluminum chassis, and the motors were bolted to the chassis.*
 
 **Battery Holder & ESC Mounts**
 
-<img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" /> 
+<img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
 
 *CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the chassis.*
 
 <img src="assets/IMG_1199.jpeg" width="39%" />
-*Mounted ESCs
 
+*Chassis with the ESC mounts installed and ESCs seated in place, ready for wiring.*
 
 ## Electronics & Testing
 
-<img src="assets/IMG_1206.jpeg" width="39%" /> 
+<img src="assets/IMG_1206.jpeg" width="39%" /> <img src="assets/WiringRover.JPEG" width="39%" />
 
-<img src="assets/WiringRover.JPEG" width="39%" /> 
+*ESC wiring in progress. The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
 
-*The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
+<img src="assets/IMG_1217.jpeg" width="39%" />
 
-<img src="assets/IMG_1217.jpeg" width="39%" /> 
-
+*Wiring complete, with ESCs, receiver, and power connections in place ahead of configuration and testing.*
 
 https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7
 
+*ESC configuration test: a single motor spinning under signal input, confirming the ESC is configured and responding correctly before testing the full drivetrain.*
 
 With wiring complete, the ESCs were configured, and the signal and ground wires were soldered onto the receiver pins to enable motor control testing with a receiver/transmitter pair.
 
-<!-- DEMO VIDEO: wheels turning under receiver/transmitter control -->
-
 https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 
-*Demo: motor control test showing the wheels turning under receiver/transmitter input.*
+*Full drivetrain demo: all wheels turning together under receiver/transmitter control, confirming the drivetrain responds correctly across every motor.*
 
 Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
 
