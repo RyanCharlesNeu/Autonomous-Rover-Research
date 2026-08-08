@@ -10,7 +10,7 @@
 <!-- HERO IMAGE: full rover photo or render -->
 <img src="assets/RoverRender.png" width="55%" />
 
-*CAD rendering of the target rover design.*
+*CAD rendering of the rover design.*
 
 ## Overview
 
