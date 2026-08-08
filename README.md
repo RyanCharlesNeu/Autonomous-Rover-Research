@@ -74,7 +74,7 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 <img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
 
-*CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the chassis.*
+*CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the bottom plate of chassis.*
 
 <img src="assets/IMG_1199.jpeg" width="39%" />
 
