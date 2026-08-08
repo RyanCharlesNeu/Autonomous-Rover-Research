@@ -78,7 +78,8 @@ The ESCs were soldered together and wired in parallel. This wiring was done with
 With wiring complete, the ESCs were configured, and the signal and ground wires were soldered onto the receiver pins to enable motor control testing with a receiver/transmitter pair.
 
 <!-- DEMO VIDEO: wheels turning under receiver/transmitter control -->
-<!-- [drag video file into editor here] -->
+
+https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 
 *Demo: motor control test showing the wheels turning under receiver/transmitter input.*
 
