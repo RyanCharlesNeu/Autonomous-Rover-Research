@@ -1,5 +1,5 @@
 # Autonomous Rover
-**Wheeled Rover for Collaborative Off-Road Robot Teams**
+**Wheeled Rover for a Collaborative Off-Road Robot Team**
 <br>
 **L3Harris HAV Lab**
 <br>
