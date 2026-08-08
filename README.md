@@ -45,9 +45,9 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 | Component | Role | Spec | Photo |
 |---|---|---|---|
-| Drive Motor | Wheel drive, sized for pull/tow load | Flipsky 6374, 140KV, current-limited to 15A | <img src="assets/flipsky-motor.jpg" width="80" /> |
-| ESC | Motor speed control | FLIPSKY Mini V6 MK5, VESC 6.6, aluminum anodized heat sink | <img src="assets/flipsky-esc.jpg" width="80" /> |
-| Battery | Power | Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector | <img src="assets/zeee-battery.jpg" width="80" /> |
+| Drive Motor | Wheel drive, sized for pull/tow load | Flipsky 6374, 140KV, current-limited to 15A | <img src="assets/Screenshot 2026-08-08 010406.png" width="80" /> |
+| ESC | Motor speed control | FLIPSKY Mini V6 MK5, VESC 6.6, aluminum anodized heat sink | <img src="assets/Screenshot 2026-08-08 010217.png" width="80" /> |
+| Battery | Power | Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector | <img src="assets/Screenshot 2026-08-08 010133.png" width="80" /> |
 | Chassis Material | Structural frame | Aluminum | <img src="assets/aluminum-stock.jpg" width="80" /> |
 
 <details>
