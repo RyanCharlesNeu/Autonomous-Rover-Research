@@ -14,7 +14,7 @@
 
 ## Overview
 
-This project explores physical collaboration between robots in a heterogeneous, off-road team, specifically, how robots with different capabilities can support each other to move across terrain that would stop any one of them alone. The core idea: each robot in the team has different strengths, and by working together, they can lean on each other's strengths in situations where their own platform falls short, letting the team perform beyond what any single robot could do alone.
+This project explores how a heterogeneous team of robots, each with a different physical skill set, can collaborate to traverse terrain that would exceed any single platform's individual capability. The core idea is that each robot in the team has different strengths, and by working together, they can lean on each other's strengths in situations where their own platform falls short, letting the team perform beyond what any single robot could accomplish alone.
 
 <img src="assets/AutonomousRobotTeam.png" width="60%" />
 
