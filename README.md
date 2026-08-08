@@ -1,4 +1,4 @@
-## Autonomous Rover
+# Autonomous Rover
 **Wheeled Rover for Collaborative Off-Road Robot Teams**
 <br>
 **L3Harris HAV Lab**
@@ -42,6 +42,13 @@ My part in this: build and autonomize the wheeled rover first, then extend auton
 *Early CAD design of the rover chassis. This is an earlier iteration, not the final design, shown here to document the design process.*
 
 Before modeling anything, the rover's motor and material requirements were driven by the pull/be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
+
+| Component | Role | Spec | Photo |
+|---|---|---|---|
+| Drive Motor | Wheel drive, sized for pull/tow load | Flipsky 6374, 140KV, current-limited to 15A | <img src="assets/flipsky-motor.jpg" width="80" /> |
+| ESC | Motor speed control | FLIPSKY Mini V6 MK5, VESC 6.6, aluminum anodized heat sink | <img src="assets/flipsky-esc.jpg" width="80" /> |
+| Battery | Power | Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector | <img src="assets/zeee-battery.jpg" width="80" /> |
+| Chassis Material | Structural frame | Aluminum | <img src="assets/aluminum-stock.jpg" width="80" /> |
 
 <details>
 <summary><strong>FEA analysis (coming soon)</strong></summary>
@@ -88,7 +95,7 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 #### Wheel Attachment
 
-Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform.
+Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
 
 <img src="assets/wheel-attachment-render.png" width="55%" />
 
@@ -108,7 +115,7 @@ Before trusting this under full driving load, the plan is to validate it with a 
 
 <img src="assets/IMG_1217.jpeg" width="39%" />
 
-*ESC Configuration with VESC Tool.*
+*Wiring complete, with ESCs, receiver, and power connections in place ahead of configuration and testing.*
 
 https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7
 
