@@ -153,7 +153,7 @@ This section will be updated with photos, video, and results once that stage is 
 
 ## Status
 
-The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The wheel attachment design has been analytically validated and machined; static and powered bench testing are the next steps before it's trusted under full load.The immediate next steps are wheels, LiDAR, and Raspberry Pi-based optical detection.
+The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The immediate next steps are attaching the wheels, integrating LiDAR, and implementing Raspberry Pi-based optical detection.
 
 ## Future Work
 
