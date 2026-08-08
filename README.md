@@ -48,20 +48,7 @@ Before modeling anything, the rover's motor and material requirements were drive
 | Drive Motor | Wheel drive, sized for pull/tow load | Flipsky 6374, 140KV, current-limited to 15A | <img src="assets/Screenshot 2026-08-08 010406.png" width="80" /> |
 | ESC | Motor speed control | FLIPSKY Mini V6 MK5, VESC 6.6, aluminum anodized heat sink | <img src="assets/Screenshot 2026-08-08 010217.png" width="80" /> |
 | Battery | Power | Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector | <img src="assets/Screenshot 2026-08-08 010133.png" width="80" /> |
-| Chassis Material | Structural frame | Aluminum | <img src="assets/aluminum-stock.jpg" width="80" /> |
-
-<details>
-<summary><strong>FEA analysis (coming soon)</strong></summary>
-
-<br>
-
-Structural validation of key components via Ansys FEA will be added here once complete.
-
-<!-- FEA IMAGE: Ansys motor shaft stress/FOS results -->
-<!-- <img src="assets/motor-shaft-fea.png" width="70%" /> -->
-<!-- *Ansys FEA of the motor shaft under worst-case bending and torsional load, validating the hand-calculated factor of safety.* -->
-
-</details>
+| Chassis Material | Structural frame | Aluminum 6061-T6| <img src="assets/ALUMINUM.jpg" width="80" /> |
 
 ## Fabrication
 
@@ -96,6 +83,20 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 #### Wheel Attachment
 
 Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
+
+<details>
+<summary><strong>FEA analysis (coming soon)</strong></summary>
+
+<br>
+
+Structural validation of key components via Ansys FEA will be added here once complete.
+
+<!-- FEA IMAGE: Ansys motor shaft stress/FOS results -->
+<!-- <img src="assets/motor-shaft-fea.png" width="70%" /> -->
+<!-- *Ansys FEA of the motor shaft under worst-case bending and torsional load, validating the hand-calculated factor of safety.* -->
+
+</details>
+
 
 <img src="assets/wheel-attachment-render.png" width="55%" />
 
