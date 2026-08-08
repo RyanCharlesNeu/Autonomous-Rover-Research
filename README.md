@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888
 
 *Proof-of-concept demo: a wheeled robot under load, initially unable to move, regains traction and drives forward once a drone lifts a portion of the weight.*
 
-Building on that proof of concept, the current phase of the project is the wheeled rover itself: a platform designed not just to move autonomously independently, but to physically pull and be pulled by other robots in the team.
+Building on that proof of concept, the current phase of the project is the wheeled rover itself: a platform being built to operate autonomously, both on its own and as part of a team, physically pulling and being pulled by other robots when needed.
 
 ## Research Program
 
