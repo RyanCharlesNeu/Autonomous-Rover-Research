@@ -110,19 +110,25 @@ Before trusting this under full driving load, the plan is to validate it with a 
 
 ## Electronics & Testing
 
+#### Wiring
+
 <img src="assets/IMG_1206.jpeg" width="39%" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/WiringRover.JPEG" width="33.51%" />
 
 *The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
 
-<img src="assets/IMG_1217.jpeg" width="39%" />
+#### ESC Configuration
 
-*Wiring complete, with ESCs, receiver, and power connections in place ahead of configuration and testing.*
+<img src="assets/IMG_1217.jpeg" width="60%" />
+
+*ESC Configuration taking place using VESC Tool Software.*
 
 https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7
 
-*ESC configuration test: a single motor spinning under signal input, confirming the ESC is configured and responding correctly before testing the full drivetrain.*
+*ESC Configuration Test: a single motor spinning during a VESC Tool test, confirming the ESC is configured and responding correctly before testing the full drivetrain.*
 
-With wiring complete, the ESCs were configured, and the signal and ground wires were soldered onto the receiver pins to enable motor control testing with a receiver/transmitter pair.
+#### Full Drive Train Test
+
+All ESCs were soldered together, with their ground and signal wires tied to a single receiver's pins, to test simple forward/back motion using a receiver and transmitter to control the motors.
 
 https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 
@@ -147,7 +153,7 @@ This section will be updated with photos, video, and results once that stage is 
 
 ## Status
 
-The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The wheel attachment design has been analytically validated and machined; static and powered bench testing are the next steps before it's trusted under full load. Wheels, LiDAR, and Raspberry Pi-based optical detection are the immediate next steps.
+The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The wheel attachment design has been analytically validated and machined; static and powered bench testing are the next steps before it's trusted under full load.The immediate next steps are wheels, LiDAR, and Raspberry Pi-based optical detection.
 
 ## Future Work
 
