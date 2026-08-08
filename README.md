@@ -50,11 +50,15 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 Structural validation of key components via Ansys FEA will be added here once complete.
 
+<!-- FEA IMAGE: Ansys motor shaft stress/FOS results -->
+<!-- <img src="assets/motor-shaft-fea.png" width="70%" /> -->
+<!-- *Ansys FEA of the motor shaft under worst-case bending and torsional load, validating the hand-calculated factor of safety.* -->
+
 </details>
 
 ## Fabrication
 
-**Chassis**
+#### Chassis
 
 https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
@@ -66,23 +70,23 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 The chassis was manufactured in aluminum based on the CAD design above. All machining was done in-house as part of the build.
 
-**Motor Mounting**
+#### Motor Mounting
 
-<img src="assets/MotorMounting.jpeg" width="30%" />
+<img src="assets/MotorMounting.jpeg" width="40%" />
 
 *Motor mounting. Mounting holes were drill pressed directly into the aluminum chassis, and the motors were bolted to the chassis.*
 
-**Battery Holder & ESC Mounts**
+#### Battery Holder & ESC Mounts
 
-<img src="assets/Cad" width="30%" /> <img src="assets/ESC&BatteryMount.jpeg" width="30%" />
+<img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
 
 *CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the chassis.*
 
-<img src="assets/IMG_1199.jpeg" width="30%" />
+<img src="assets/IMG_1199.jpeg" width="39%" />
 
 *Chassis with the ESC mounts installed and ESCs seated in place, ready for wiring.*
 
-**Wheel Attachment**
+#### Wheel Attachment
 
 Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform.
 
@@ -138,3 +142,15 @@ This section will be updated with photos, video, and results once that stage is 
 The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The wheel attachment design has been analytically validated and machined; static and powered bench testing are the next steps before it's trusted under full load. Wheels, LiDAR, and Raspberry Pi-based optical detection are the immediate next steps.
 
 ## Future Work
+
+- **Wheel installation** and full drivetrain assembly with the outboard-bearing mount
+- **Validation testing** of the wheel attachment: static side-load bench test followed by a powered on-stand run test
+- **Ansys FEA** of the motor shaft and adapter, confirming the hand-calculated factor of safety against simulation
+- **LiDAR integration** for terrain and obstacle sensing
+- **Raspberry Pi optical detection** for basic obstacle/object recognition
+- **Autonomous navigation** for the rover within the broader heterogeneous robot team
+- **Wiring cleanup**, moving from the current parallel ESC wiring to a proper PWM-split configuration
+- **Drive shaft with gear ratio**, a possible improvement over the current direct-drive setup for better torque control
+- **Legged robot autonomy**, extending this work to a second platform type in the broader research program
+- **Physical connection mechanism**, developing an arm that lets robots autonomously connect and push or pull each other
+- **Field testing** of pull/tow capability with other team members
