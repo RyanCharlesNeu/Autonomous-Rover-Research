@@ -66,7 +66,7 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 <img src="assets/MotorMounting.jpeg" width="40%" />
 
-*Motor mounting. Mounting holes were drill pressed directly into the aluminum chassis, and the motors were bolted to the chassis.*
+*Mounting holes were drill pressed directly into the aluminum chassis, and the motors were bolted to the chassis.*
 
 #### Battery Holder & ESC Mounts
 
@@ -102,7 +102,7 @@ Structural validation of key components via Ansys FEA will be added here once co
 
 *Rendering of the outboard-bearing wheel attachment design: a custom machined adapter connects the motor shaft to the wheel hub, with a support bearing and standoff bracket carrying the wheel's load into the chassis wall rather than back into the motor.*
 
-<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="45%" />
+<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="59.75%" />
 
 *The lathe used to machine the wheel attachment adapter (left), and the finished piece (right).*
 
@@ -110,9 +110,9 @@ Before trusting this under full driving load, the plan is to validate it with a 
 
 ## Electronics & Testing
 
-<img src="assets/IMG_1206.jpeg" width="39%" /> <img src="assets/WiringRover.JPEG" width="39%" />
+<img src="assets/IMG_1206.jpeg" width="39%" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/WiringRover.JPEG" width="33.51%" />
 
-*ESC wiring in progress. The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
+*The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
 
 <img src="assets/IMG_1217.jpeg" width="39%" />
 
