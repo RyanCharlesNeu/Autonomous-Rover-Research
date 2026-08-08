@@ -44,7 +44,7 @@ Before modeling anything, the rover's motor and material requirements were drive
 
 **Chassis**
 
-https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
+https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f 
 
 *Pictured above is the chassis assembly. The chassis was machined from aluminum using angle grinder and drill press.*
 
@@ -62,15 +62,14 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 **Battery Holder & ESC Mounts**
 
-<img src="assets/battery-esc-mount-cad.png" width="55%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
+<img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" /> 
 
 *CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the chassis.*
 
-**Wheel Attachment**
+<img src="assets/IMG_1199.jpeg" width="39%" />
+*Mounted ESCs
 
-<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="45%" />
 
-*The lathe used to machine the wheel attachment component (left), and the finished piece (right).*
 ## Electronics & Testing
 
 The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.
@@ -84,6 +83,12 @@ https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 *Demo: motor control test showing the wheels turning under receiver/transmitter input.*
 
 Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
+
+**Wheel Attachment**
+
+<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="45%" />
+
+*The lathe used to machine the wheel attachment component (left), and the finished piece (right).*
 
 <details>
 <summary><strong>Coming soon: wheels, LiDAR & autonomy (click to expand)</strong></summary>
