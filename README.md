@@ -72,7 +72,12 @@ The chassis was manufactured in aluminum based on the CAD design above. All mach
 
 ## Electronics & Testing
 
-The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.
+<img src="assets/IMG_1206.jpeg" width="39%" /> 
+
+
+*The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
+
+
 
 With wiring complete, the ESCs were configured, and the signal and ground wires were soldered onto the receiver pins to enable motor control testing with a receiver/transmitter pair.
 
