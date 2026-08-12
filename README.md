@@ -41,6 +41,9 @@ This work is part of a broader research effort, **Autonomous Cyber-Physical Vehi
 
 Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
 
+
+## Bill of Materials 
+
 | Component | Role | Spec | Photo |
 |---|---|---|---|
 | Drive Motor | Wheel drive, sized for pull/tow load | Flipsky 6374, 140KV, current-limited to 15A | <img src="assets/Screenshot 2026-08-08 010406.png" width="80" /> |
