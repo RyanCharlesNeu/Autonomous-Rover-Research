@@ -35,7 +35,7 @@ This work is part of a broader research effort, **Autonomous Cyber-Physical Vehi
 
 ## Design & CAD
 
-<img src="assets/rover-cad-original.png" width="70%" />
+<img src="Screenshot 2026-08-13 144500.png" width="70%" />
 
 *Early CAD design of the rover chassis. This is an earlier iteration, not the final design, shown here to document the design process.*
 
