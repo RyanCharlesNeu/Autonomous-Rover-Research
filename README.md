@@ -101,9 +101,9 @@ Structural validation of key components via Ansys FEA will be added here once co
 </details>
 
 
-<img src="assets/wheel-attachment-render.png" width="55%" />
+<!-- <img src="assets/wheel-attachment-render.png" width="55%" /> -->
 
-*Rendering of the outboard-bearing wheel attachment design: a custom machined adapter connects the motor shaft to the wheel hub, with a support bearing and standoff bracket carrying the wheel's load into the chassis wall rather than back into the motor.*
+<!--*Rendering of the outboard-bearing wheel attachment design: a custom machined adapter connects the motor shaft to the wheel hub, with a support bearing and standoff bracket carrying the wheel's load into the chassis wall rather than back into the motor.*-->
 
 <img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="59.75%" />
 
