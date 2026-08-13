@@ -76,7 +76,7 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 *The 3D-printed PETG battery holder and ESC mounts. Mounting holes were drill pressed and the parts secured to the bottom plate of the chassis.*
 
-The battery mount uses M5 bolts (32 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit tolerance to seat the ESCs securely while allowing for removal.
+The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit tolerance to seat the ESCs securely while allowing for removal.
 
 <img src="assets/IMG_1199.jpeg" width="39%" />
 
