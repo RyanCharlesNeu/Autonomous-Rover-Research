@@ -88,7 +88,7 @@ The battery mount uses M5 bolts (32 TPI, 1.5" length) into the PETG mount. The E
 Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
 
 <details>
-<summary><strong>FEA analysis (coming soon)</strong></summary>
+<summary><strong>FEA analysis with Ansys (coming soon)</strong></summary>
 
 <br>
 
