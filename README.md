@@ -34,15 +34,14 @@ Building on that proof of concept, the current phase of the project is the wheel
 This work is part of a broader research effort, **Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains**. My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.
 
 ## Design & CAD
-Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
 
+Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list below, which the CAD design was then built around.
 
 <img src="assets/Screenshot 2026-08-13 144500.png" width="40%" />
 
-*CAD design of the rover assemblie featuring motors,wheels and all electronic components.*
+*CAD design of the rover assembly featuring motors, wheels, and all electronic components.*
 
-
-## Bill of Materials 
+## Bill of Materials
 
 | Component | Role | Spec | Photo |
 |---|---|---|---|
