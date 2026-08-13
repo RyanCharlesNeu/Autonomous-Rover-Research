@@ -34,12 +34,12 @@ Building on that proof of concept, the current phase of the project is the wheel
 This work is part of a broader research effort, **Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains**. My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.
 
 ## Design & CAD
+Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
+
 
 <img src="assets/Screenshot 2026-08-13 144500.png" width="40%" />
 
 *CAD design of the rover assemblie featuring motors,wheels and all electronic components.*
-
-Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list that the CAD design was built around.
 
 
 ## Bill of Materials 
@@ -73,9 +73,9 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 #### Battery Holder & ESC Mounts
 
-<img src="assets/Cad" width="39%" /> <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
+ <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
 
-*CAD design (left) and the 3D-printed PETG battery holder and ESC mounts (right). Mounting holes were drill pressed and the parts secured to the bottom plate of chassis.*
+*The 3D-printed PETG battery holder and ESC mounts. Mounting holes were drill pressed and the parts secured to the bottom plate of chassis.*
 
 The battery mount uses M5 bolts (32 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit tolerance to seat the ESCs securely while allowing for removal.
 
