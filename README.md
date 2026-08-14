@@ -53,7 +53,7 @@ Before modeling anything, the rover's motor and material requirements were drive
 | Wheels | Traction/mobility | 4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity | <img src="assets/BigYellowWheelsCropped.png" width="80" /> |
 | Enclosure/Mount Material | 3D-printed battery/ESC mounts | PETG | <img src="assets/Filament.jpg" width="80" /> |
 | Wheel Adapter | Custom-machined coupling between motor shaft and wheel hub | Machined from aluminum round bar stock on lathe | <img src="assets/aluminum6061.jpg" width="80" /> |
-| Wiring | Motor/ESC power connections | 12 AWG wire, EC5 connectors | <img src="assets/WIRING_PHOTO.jpg" width="80" /> |
+| Wiring | Motor/ESC power connections | 12 AWG wire, EC5 connectors | <img src="assets/Black and Red.jpg" width="80" /> |
 
 ## Fabrication
 
