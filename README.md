@@ -50,7 +50,7 @@ Before modeling anything, the rover's motor and material requirements were drive
 | Battery | Power | Zeee 6S LiPo, 10000mAh, 22.2V, 120C, EC5 connector | <img src="assets/Screenshot 2026-08-08 010133.png" width="80" /> |
 | Chassis Material | Structural frame | Aluminum 6061-T6 | <img src="assets/ALUMINUM.jpg" width="80" /> |
 | Motor Mount | Secures motor to chassis | N63 Adjustable Motor Mount, 6374 Brushless Motor Holder | <img src="assets/Screenshot 2026-08-13 211015.png" width="80" /> |
-| Wheels | Traction/mobility | 4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity | <img src="BigYellowWheelsCropped.png" width="80" /> |
+| Wheels | Traction/mobility | 4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity | <img src="assets/BigYellowWheelsCropped.png" width="80" /> |
 | Enclosure/Mount Material | 3D-printed battery/ESC mounts | PETG | <img src="assets/Filament.jpg" width="80" /> |
 | Wheel Adapter | Custom-machined coupling between motor shaft and wheel hub | Machined from aluminum round bar stock on lathe | <img src="assets/" width="80" /> |
 | Wiring | Motor/ESC power connections | 12 AWG wire, EC5 connectors | <img src="assets/WIRING_PHOTO.jpg" width="80" /> |
