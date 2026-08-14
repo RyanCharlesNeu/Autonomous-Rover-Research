@@ -148,7 +148,7 @@ Controller responsiveness was confirmed through this test before moving on to se
 
 <br>
 
-The next stage of the build, expected within the next few days, adds:
+The next stage of the build, expected within the next few weeks, adds:
 
 - **Wheels** mounted to the completed chassis and drivetrain
 - **LiDAR** for terrain and obstacle sensing
