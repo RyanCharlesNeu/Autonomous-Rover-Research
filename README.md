@@ -91,24 +91,6 @@ The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The 
 
 Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
 
-<details>
-<summary><strong>Coming soon: FEA analysis with Ansys (click to expand)</strong></summary>
-
-<br>
-
-Structural validation of key components via Ansys FEA will be added here once complete.
-
-<!-- FEA IMAGE: Ansys motor shaft stress/FOS results -->
-<!-- <img src="assets/motor-shaft-fea.png" width="70%" /> -->
-<!-- *Ansys FEA of the motor shaft under worst-case bending and torsional load, validating the hand-calculated factor of safety.* -->
-
-</details>
-
-
-<!-- <img src="assets/wheel-attachment-render.png" width="55%" /> -->
-
-<!--*Rendering of the outboard-bearing wheel attachment design: a custom machined adapter connects the motor shaft to the wheel hub, with a support bearing and standoff bracket carrying the wheel's load into the chassis wall rather than back into the motor.*-->
-
 <img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="59.75%" />
 
 *The lathe used to machine the wheel attachment adapter (left), and the finished piece (right).*
@@ -143,24 +125,31 @@ https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 
 Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
 
-<details>
-<summary><strong>Coming soon: wheels, LiDAR & autonomy (click to expand)</strong></summary>
+## Autonomy Simulation
 
-<br>
+Before the physical rover has wheels and a lidar mounted, I built a ROS 2 and Gazebo simulation of a 4-wheel skid-steer rover to develop and test the autonomy software stack. This is a simulation only and has not yet been deployed to the physical rover.
 
-The next stage of the build, expected within the next few weeks, adds:
+#### SLAM Mapping
 
-- **Wheels** mounted to the completed chassis and drivetrain
-- **LiDAR** for terrain and obstacle sensing
-- **Raspberry Pi** running simple optical detection
+PASTE_SLAM_VIDEO_URL_HERE
 
-This section will be updated with photos, video, and results once that stage is complete.
+*The simulated rover driving through a walled room with obstacles while slam_toolbox builds an occupancy grid map from its 2D lidar scan, visualized live in RViz. The map was then saved and reused for navigation.*
 
-</details>
+#### Autonomous Navigation Loop
+
+PASTE_LOOP_VIDEO_URL_HERE
+
+*The rover autonomously navigating a figure-8 route around both obstacles using Nav2 on the saved map. A custom Python script sends waypoint goals in a continuous loop, switching to the next waypoint as the rover approaches the current one so the motion stays smooth instead of stopping at each point. Gazebo (left) and RViz (right) are shown together.*
+
+**What I built:** the rover model and world in SDF, the ROS-Gazebo bridge and launch files, a tuned Nav2 configuration, the waypoint-loop and teleop scripts, and a one-command startup and shutdown system.
+
+**Stack:** ROS 2 (Lyrical), Gazebo, slam_toolbox, Nav2, RViz, Python (rclpy).
+
+**Simplifications:** the simulation uses noise-free odometry from Gazebo and a fixed map-to-odom transform in place of AMCL localization, which is not representative of real hardware. Adding sensor noise, GPS dropout, and an EKF is the next step before porting this to the physical rover.
 
 ## Status
 
-The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. The immediate next steps are attaching the wheels, integrating LiDAR, and implementing Raspberry Pi-based optical detection.
+The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. In parallel, the autonomy stack (SLAM mapping and Nav2 navigation) has been developed and demonstrated in simulation. The immediate next steps are attaching the wheels, integrating LiDAR, and porting the simulated autonomy to the physical rover.
 
 ## Future Work
 
@@ -169,6 +158,8 @@ The rover is under active development. Chassis fabrication and core drivetrain e
 - **Ansys FEA** of the motor shaft and adapter, confirming the hand-calculated factor of safety against simulation
 - **LiDAR integration** for terrain and obstacle sensing
 - **Raspberry Pi optical detection** for basic obstacle/object recognition
+- **Sensor noise, GPS dropout, and EKF state estimation** in simulation, to test robustness before hardware
+- **Port the ROS 2 navigation stack** from simulation to the physical rover
 - **Autonomous navigation** for the rover within the broader heterogeneous robot team
 - **Wiring cleanup**, moving from the current parallel ESC wiring to a proper PWM-split configuration
 - **Drive shaft with gear ratio**, a possible improvement over the current direct-drive setup for better torque control
