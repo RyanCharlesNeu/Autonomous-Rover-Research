@@ -137,7 +137,7 @@ https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55
 
 #### Autonomous Navigation Loop
 
-PASTE_LOOP_VIDEO_URL_HERE
+https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929
 
 *The rover autonomously navigating a figure-8 route around both obstacles using Nav2 on the saved map. A custom Python script sends waypoint goals in a continuous loop, switching to the next waypoint as the rover approaches the current one so the motion stays smooth instead of stopping at each point. Gazebo (left) and RViz (right) are shown together.*
 
