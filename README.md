@@ -131,7 +131,7 @@ Before the physical rover has wheels and a lidar mounted, I built a ROS 2 and Ga
 
 #### SLAM Mapping
 
-PASTE_SLAM_VIDEO_URL_HERE
+https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55
 
 *The simulated rover driving through a walled room with obstacles while slam_toolbox builds an occupancy grid map from its 2D lidar scan, visualized live in RViz. The map was then saved and reused for navigation.*
 
