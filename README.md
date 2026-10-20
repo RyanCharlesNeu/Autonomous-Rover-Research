@@ -1,7 +1,7 @@
 # Autonomous Rover
 **Wheeled Rover for a Collaborative Off-Road Robot Team**
 <br>
-**L3Harris HAV Lab**
+**L3Harris Heterogeneous Autonomous Vehicle Lab**
 <br>
 **Advisor: Dr. Sun**
 <br>
