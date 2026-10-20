@@ -149,8 +149,6 @@ https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929
 
 ## Status
 
-## Status
-
 The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. In parallel, I set up SLAM mapping and Nav2 navigation on a simulated rover in Gazebo as a first testbed for the autonomy software. The autonomy stack will continue to be built out, starting with attaching the wheels, integrating LiDAR, and porting and extending the simulated autonomy on the physical rover.
 
 ## Future Work
