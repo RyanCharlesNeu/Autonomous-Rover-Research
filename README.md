@@ -52,9 +52,9 @@ Before modeling anything, the rover's motor and material requirements were drive
 | Motor Mount | Secures motor to chassis | N63 Adjustable Motor Mount, 6374 Brushless Motor Holder | <img src="assets/Screenshot 2026-08-13 211015.png" width="80" /> |
 | Wheels | Traction/mobility | 4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity | <img src="assets/BigYellowWheelsCropped.png" width="80" /> |
 | Enclosure/Mount Material | 3D-printed battery/ESC mounts | PETG | <img src="assets/Filament.jpg" width="80" /> |
-| Shaft Coupler | Connects the motor shaft to the drive shaft | | |
-| Drive Shaft | Transmits motor torque to the wheel | | |
-| Outboard Support Bearing | Supports the drive shaft near the wheel and carries bending load into the chassis | | |
+| Shaft Coupler | Connects the motor shaft to the drive shaft | | <img src="assets/Screenshot 2026-10-27 235015.png" width="80" />  |
+| Drive Shaft | Transmits motor torque to the wheel | | <img src="assets/Screenshot 2026-10-27 235029.png" width="80" /> |
+| Outboard Support Bearing | Supports the drive shaft near the wheel and carries bending load into the chassis | | <img src="assets/Screenshot 2026-10-27 235148.png" width="80" /> |
 | Wiring | Motor/ESC power connections | 12 AWG wire, EC5 connectors | <img src="assets/Black and Red.jpg" width="80" /> |
 
 ## Fabrication
