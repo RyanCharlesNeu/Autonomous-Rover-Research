@@ -52,7 +52,9 @@ Before modeling anything, the rover's motor and material requirements were drive
 | Motor Mount | Secures motor to chassis | N63 Adjustable Motor Mount, 6374 Brushless Motor Holder | <img src="assets/Screenshot 2026-08-13 211015.png" width="80" /> |
 | Wheels | Traction/mobility | 4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity | <img src="assets/BigYellowWheelsCropped.png" width="80" /> |
 | Enclosure/Mount Material | 3D-printed battery/ESC mounts | PETG | <img src="assets/Filament.jpg" width="80" /> |
-| Wheel Adapter | Custom-machined coupling between motor shaft and wheel hub | Machined from aluminum round bar stock on lathe | <img src="assets/aluminum6061.jpg" width="80" /> |
+| Shaft Coupler | Connects the motor shaft to the drive shaft | | |
+| Drive Shaft | Transmits motor torque to the wheel | | |
+| Outboard Support Bearing | Supports the drive shaft near the wheel and carries bending load into the chassis | | |
 | Wiring | Motor/ESC power connections | 12 AWG wire, EC5 connectors | <img src="assets/Black and Red.jpg" width="80" /> |
 
 ## Fabrication
@@ -89,11 +91,7 @@ The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The 
 
 #### Wheel Attachment
 
-Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9–1.1, right at or below the failure threshold. The fix was to add a dedicated outboard support bearing near the wheel, intercepting the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. With the outboard bearing in place, the same analysis puts the shaft's factor of safety at roughly 3.45 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
-
-<img src="assets/Lathe.jpeg" width="30%" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/LatheCropped.jpeg" width="59.75%" />
-
-*The lathe used to machine the wheel attachment adapter (left), and the finished piece (right).*
+Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9, right at or below the failure threshold. The current design instead uses a coupler to connect the motor shaft to a separate drive shaft, with a dedicated outboard support bearing near the wheel. The bearing intercepts the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. In this design, the same analysis puts the calculated factor of safety at roughly 3 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
 
 Before trusting this under full driving load, the plan is to validate it with a static side-load bench test, then a powered on-stand run test, confirming the calculated design holds up under real conditions.
 
@@ -121,13 +119,13 @@ All ESCs were soldered together, with their ground and signal wires tied to a si
 
 https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
 
-*Full drivetrain demo: all wheels turning together under receiver/transmitter control, confirming the drivetrain responds correctly across every motor.*
+*Full drivetrain demo: all motors turning together under receiver/transmitter control, confirming the drivetrain responds correctly across every motor.*
 
 Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
 
 ## Autonomy Simulation
 
-Before the physical rover has wheels and a lidar mounted, I built a ROS 2 and Gazebo simulation of a 4-wheel skid-steer rover to develop and test the autonomy software stack. This is a simulation only and has not yet been deployed to the physical rover.
+Before the physical rover has wheels and a lidar mounted, I built a ROS 2 and Gazebo simulation of a 4-wheel skid-steer rover to prototype the first layers of its autonomy software stack. This is a simulation only and has not yet been deployed to the physical rover.
 
 #### SLAM Mapping
 
@@ -153,16 +151,16 @@ The rover is under active development. Chassis fabrication and core drivetrain e
 
 ## Future Work
 
-- **Wheel installation** and full drivetrain assembly with the outboard-bearing mount
-- **Validation testing** of the wheel attachment: static side-load bench test followed by a powered on-stand run test
-- **Ansys FEA** of the motor shaft and adapter, confirming the hand-calculated factor of safety against simulation
+- **Wheel installation** and full drivetrain assembly with the drive shaft, coupler, and outboard bearing
+- **Validation testing** of the wheel drive assembly: static side-load bench test followed by a powered on-stand run test
+- **Ansys FEA** of the drive shaft and coupler, confirming the hand-calculated factor of safety against simulation
 - **LiDAR integration** for terrain and obstacle sensing
 - **Raspberry Pi optical detection** for basic obstacle/object recognition
 - **Sensor noise, GPS dropout, and EKF state estimation** in simulation, to test robustness before hardware
 - **Port the ROS 2 navigation stack** from simulation to the physical rover
 - **Autonomous navigation** for the rover within the broader heterogeneous robot team
 - **Wiring cleanup**, moving from the current parallel ESC wiring to a proper PWM-split configuration
-- **Drive shaft with gear ratio**, a possible improvement over the current direct-drive setup for better torque control
+- **Gear reduction** between the motor and drive shaft, a possible improvement for better torque control
 - **Legged robot autonomy**, extending this work to a second platform type in the broader research program
 - **Physical connection mechanism**, developing an arm that lets robots autonomously connect and push or pull each other
 - **Field testing** of pull/tow capability with other team members
