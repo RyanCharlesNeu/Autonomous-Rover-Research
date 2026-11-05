@@ -9,33 +9,16 @@ A 50 lb, 4-wheel skid-steer rover being built to drive autonomously on its own a
 
 *Current build: fabricated chassis with drivetrain electronics installed.*
 
-## Key Results
-
-- **Drone-assisted traction proof of concept:** a loaded wheeled robot that could not move regained motion once a drone lifted part of its weight. Presented a multi-robot coordination demo to the **U.S. Army Research Lab**.
-- **Wheel drive redesign backed by fatigue analysis:** a direct motor-shaft wheel mount had a factor of safety of about 0.9. A coupler, separate drive shaft, and outboard support bearing raised it to about **3** under worst-case loading.
-- **Fabricated and tested drivetrain:** aluminum 6061-T6 chassis machined in-house; Flipsky 6374 motors and VESC ESCs configured and verified together under RC control.
-- **Simulated autonomy stack:** ROS 2 and Gazebo rover that builds a SLAM map from 2D lidar and runs a continuous figure-8 waypoint loop with Nav2.
-
-## Demos
-
-https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
-
-*Full drivetrain test: all motors driving together under transmitter control.*
-
-https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929
-
-*Simulated rover running a continuous figure-8 Nav2 waypoint loop. Gazebo (left), RViz (right).*
-
 ## Status at a Glance
 
 ```mermaid
 flowchart LR
     subgraph HW["Hardware"]
-        A["Chassis<br/>fabrication"] --> B["Motors, ESCs,<br/>battery, wiring"]
+        Q["CAD<br/>design"] --> A["Chassis<br/>fabrication"] --> B["Motors, ESCs,<br/>battery, wiring"]
         B --> C["RC drivetrain<br/>test"]
-        C --> D["Wheel drive assembly<br/>shaft, coupler, bearing"]
-        D --> E["Validation tests<br/>side-load + on-stand"]
-        D --> F["Ansys FEA<br/>of shaft"]
+        C --> F["FEA<br/>of shaft"]
+        F --> D["Wheel drive redesign<br/>shaft, coupler, bearing"]
+        D --> E["Testing under<br/>receiver/transmitter control"]
     end
 
     subgraph SW["Autonomy (simulation)"]
@@ -44,7 +27,7 @@ flowchart LR
     end
 
     subgraph INT["Integration"]
-        J["LiDAR + Pi camera<br/>on rover"] --> K["Port ROS 2 stack<br/>to hardware"]
+        J["LiDAR, IMU, GPS,<br/>Pi camera on rover"] --> K["Port ROS 2 stack<br/>to hardware"]
         K --> L["Autonomous<br/>physical rover"]
     end
 
@@ -64,22 +47,39 @@ flowchart LR
     classDef progress fill:#f9a825,color:#000,stroke:#f57f17
     classDef planned fill:#9e9e9e,color:#fff,stroke:#616161
 
-    class A,B,C,G,H,M done
+    class Q,A,B,C,F,G,H,M done
     class D progress
-    class E,F,I,J,K,L,N,O,P planned
+    class E,I,J,K,L,N,O,P planned
 ```
 
 Green: complete. Yellow: in progress. Gray: planned.
+
+## Key Results
+
+- **Drone-assisted traction proof of concept:** a loaded wheeled robot that could not move regained motion once a drone lifted part of its weight. Presented a multi-robot coordination demo to the **U.S. Army Research Lab**.
+- **Fabricated and tested drivetrain:** aluminum 6061-T6 chassis machined in-house; Flipsky 6374 motors and VESC ESCs configured and verified together under RC control.
+- **Wheel drive redesign backed by fatigue analysis:** a direct motor-shaft wheel mount had a factor of safety of about 0.9. A coupler, separate drive shaft, and outboard support bearing raised it to about **3** under worst-case loading.
+- **Simulated autonomy stack:** ROS 2 and Gazebo rover that builds a SLAM map from 2D lidar and runs a continuous figure-8 waypoint loop with Nav2.
+
+## Demos
+
+https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
+
+*Full drivetrain test: all motors driving together under transmitter control.*
+
+https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929
+
+*Simulated rover running a continuous figure-8 Nav2 waypoint loop. Gazebo (left), RViz (right).*
 
 ## Next Steps
 
 1. Install wheels with the drive shaft, coupler, and outboard bearing.
 2. Validate the wheel drive: static side-load bench test, then powered on-stand run test.
 3. Add sensor noise, GPS dropout, and EKF state estimation to the simulation.
-4. Mount and integrate LiDAR on the physical rover.
+4. Mount and integrate LiDAR, IMU, and GPS on the physical rover.
 5. Port the ROS 2 navigation stack from simulation to hardware.
 
-Longer term: Ansys FEA of the shaft and coupler, Raspberry Pi optical detection, PWM-split ESC wiring, possible gear reduction, robot-to-robot connection mechanism, legged platform autonomy, and field testing of pull/tow capability.
+Longer term: Raspberry Pi optical detection, PWM-split ESC wiring, possible gear reduction, robot-to-robot connection mechanism, legged platform autonomy, and field testing of pull/tow capability.
 
 ---
 
