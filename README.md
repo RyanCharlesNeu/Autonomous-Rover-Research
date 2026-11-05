@@ -1,47 +1,117 @@
 # Autonomous Rover
 **Wheeled Rover for a Collaborative Off-Road Robot Team**
 <br>
-**L3Harris Heterogeneous Autonomous Vehicle Lab**
-<br>
-**Advisor: Dr. Sun**
-<br>
-**Role: Undergraduate Research Assistant**
+L3Harris Heterogeneous Autonomous Vehicle Lab | Advisor: Dr. Sun | Role: Undergraduate Research Assistant
 
-<!-- HERO IMAGE: full rover photo or render -->
-<img src="assets/RoverRender.png" width="55%" />
+A 50 lb, 4-wheel skid-steer rover being built to drive autonomously on its own and as part of a heterogeneous robot team, including towing and being towed by other robots.
 
-*CAD rendering of the rover design.*
+<img src="assets/IMG_1217.jpeg" width="55%" />
 
-## Overview
+*Current build: fabricated chassis with drivetrain electronics installed.*
 
-This project explores how a heterogeneous team of robots, each with a different physical skill set, can collaborate to traverse terrain that would exceed any single platform's individual capability. The core idea is that each robot in the team has different strengths, and by working together, they can lean on each other's strengths in situations where their own platform falls short, letting the team perform beyond what any single robot could accomplish alone.
+## Key Results
+
+- **Drone-assisted traction proof of concept:** a loaded wheeled robot that could not move regained motion once a drone lifted part of its weight. Presented a multi-robot coordination demo to the **U.S. Army Research Lab**.
+- **Wheel drive redesign backed by fatigue analysis:** a direct motor-shaft wheel mount had a factor of safety of about 0.9. A coupler, separate drive shaft, and outboard support bearing raised it to about **3** under worst-case loading.
+- **Fabricated and tested drivetrain:** aluminum 6061-T6 chassis machined in-house; Flipsky 6374 motors and VESC ESCs configured and verified together under RC control.
+- **Simulated autonomy stack:** ROS 2 and Gazebo rover that builds a SLAM map from 2D lidar and runs a continuous figure-8 waypoint loop with Nav2.
+
+## Demos
+
+https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
+
+*Full drivetrain test: all motors driving together under transmitter control.*
+
+https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929
+
+*Simulated rover running a continuous figure-8 Nav2 waypoint loop. Gazebo (left), RViz (right).*
+
+## Status at a Glance
+
+```mermaid
+flowchart LR
+    subgraph HW["Hardware"]
+        A["Chassis<br/>fabrication"] --> B["Motors, ESCs,<br/>battery, wiring"]
+        B --> C["RC drivetrain<br/>test"]
+        C --> D["Wheel drive assembly<br/>shaft, coupler, bearing"]
+        D --> E["Validation tests<br/>side-load + on-stand"]
+        D --> F["Ansys FEA<br/>of shaft"]
+    end
+
+    subgraph SW["Autonomy (simulation)"]
+        G["SLAM mapping<br/>slam_toolbox"] --> H["Nav2 waypoint<br/>loop"]
+        H --> I["Sensor noise,<br/>GPS dropout, EKF"]
+    end
+
+    subgraph INT["Integration"]
+        J["LiDAR + Pi camera<br/>on rover"] --> K["Port ROS 2 stack<br/>to hardware"]
+        K --> L["Autonomous<br/>physical rover"]
+    end
+
+    subgraph TEAM["Team research"]
+        M["Drone-assist proof<br/>of concept + ARL demo"]
+        N["Robot-to-robot<br/>tow mechanism"]
+        O["Legged platform<br/>autonomy"]
+        P["Field testing<br/>pull/tow"]
+    end
+
+    E --> J
+    I --> K
+    L --> P
+    N --> P
+
+    classDef done fill:#2e7d32,color:#fff,stroke:#1b5e20
+    classDef progress fill:#f9a825,color:#000,stroke:#f57f17
+    classDef planned fill:#9e9e9e,color:#fff,stroke:#616161
+
+    class A,B,C,G,H,M done
+    class D progress
+    class E,F,I,J,K,L,N,O,P planned
+```
+
+Green: complete. Yellow: in progress. Gray: planned.
+
+## Next Steps
+
+1. Install wheels with the drive shaft, coupler, and outboard bearing.
+2. Validate the wheel drive: static side-load bench test, then powered on-stand run test.
+3. Add sensor noise, GPS dropout, and EKF state estimation to the simulation.
+4. Mount and integrate LiDAR on the physical rover.
+5. Port the ROS 2 navigation stack from simulation to hardware.
+
+Longer term: Ansys FEA of the shaft and coupler, Raspberry Pi optical detection, PWM-split ESC wiring, possible gear reduction, robot-to-robot connection mechanism, legged platform autonomy, and field testing of pull/tow capability.
+
+---
+
+## Background
+
+This work is part of a broader research effort, **Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains**. The idea is that a team of robots with different physical strengths can lean on each other to cross terrain that no single platform could handle alone.
 
 <img src="assets/AutonomousRobotTeam.png" width="60%" />
 
 *Renderings of a heterogeneous robot team operating together.*
 
-An early proof-of-concept demonstrated this directly: a wheeled robot, initially unable to move under an applied load, regains motion once a drone lifts a portion of that weight, reducing static friction enough for the robot to drive forward. As part of this work, I calibrated a RadioLink drone using ArduPilot and delivered a multi-robot coordination demonstration and presentation to the United States Army Research Lab.
+My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.
 
-<!-- PROOF OF CONCEPT VIDEO -->
+**Proof of concept.** A wheeled robot under load, initially unable to move, regains traction once a drone lifts part of its weight, reducing static friction enough to drive forward. For this, I calibrated a RadioLink drone using ArduPilot and delivered the demo and presentation to the U.S. Army Research Lab.
+
 https://github.com/user-attachments/assets/ae976bf7-49cf-4480-8de5-11d52da3f888
 
-*Proof-of-concept demo: a wheeled robot under load, initially unable to move, regains traction and drives forward once a drone lifts a portion of the weight.*
+## Technical Details
 
-Building on that proof of concept, the current phase of the project is the wheeled rover itself: a platform being built to operate autonomously, both on its own and as part of a team, physically pulling and being pulled by other robots when needed.
+### Design Requirements
 
-## Research Program
-
-This work is part of a broader research effort, **Autonomous Cyber-Physical Vehicle Coordination on Complex Terrains**. My role: build and autonomize the wheeled rover, extend that autonomy to a legged platform, and develop a mechanism that lets robots physically connect to push or pull each other autonomously.
-
-## Design & CAD
-
-Before modeling anything, the rover's motor and material requirements were driven by the pull and be-pulled requirement: weight and torque calculations determined the motor sizing needed to both move the rover itself and tow another robot in the team. Those calculations set the material and component list below, which the CAD design was then built around.
+Motor and material choices were driven by the pull and be-pulled requirement. Weight and torque calculations set the motor sizing needed to move the rover itself and tow another robot, and the CAD design was built around the resulting component list.
 
 <img src="assets/Screenshot 2026-08-13 144500.png" width="40%" />
 
-*CAD design of the rover assembly featuring motors, wheels, and all electronic components.*
+*CAD assembly with motors, wheels, and electronics.*
 
-## Bill of Materials
+### Wheel Attachment Analysis
+
+Driving the wheel directly off the motor shaft gave a factor of safety against shaft fatigue of about 0.9, at or below the failure threshold. The current design uses a coupler to a separate drive shaft with an outboard support bearing near the wheel. The bearing takes the bending load before it reaches the motor shaft or the motor's internal bearings, raising the factor of safety to about 3 under worst-case loading. The motor was disassembled to inspect its internals and characterize the load it could actually handle, rather than relying only on manufacturer specs.
+
+### Bill of Materials
 
 | Component | Role | Spec | Photo |
 |---|---|---|---|
@@ -52,16 +122,36 @@ Before modeling anything, the rover's motor and material requirements were drive
 | Motor Mount | Secures motor to chassis | N63 Adjustable Motor Mount, 6374 Brushless Motor Holder | <img src="assets/Screenshot 2026-08-13 211015.png" width="80" /> |
 | Wheels | Traction/mobility | 4.80/4.00-8 Pneumatic Wheelbarrow Tire, 16", 400 lb capacity | <img src="assets/BigYellowWheelsCropped.png" width="80" /> |
 | Enclosure/Mount Material | 3D-printed battery/ESC mounts | PETG | <img src="assets/Filament.jpg" width="80" /> |
-| Shaft Coupler | Connects the motor shaft to the drive shaft | | <img src="assets/Screenshot 2026-10-27 235015.png" width="80" />  |
+| Shaft Coupler | Connects the motor shaft to the drive shaft | | <img src="assets/Screenshot 2026-10-27 235015.png" width="80" /> |
 | Drive Shaft | Transmits motor torque to the wheel | | <img src="assets/Screenshot 2026-10-27 235029.png" width="80" /> |
 | Outboard Support Bearing | Supports the drive shaft near the wheel and carries bending load into the chassis | | <img src="assets/Screenshot 2026-10-27 235148.png" width="80" /> |
 | Wiring | Motor/ESC power connections | 12 AWG wire, EC5 connectors | <img src="assets/Black and Red.jpg" width="80" /> |
 
-## Fabrication
+### Autonomy Simulation
 
-The rover was fabricated in Villanova's machine shop using an angle grinder, drill press, lathe, 3D printer (PETG parts), and soldering iron. Lock nuts are used throughout to account for vibration during operation.
+A ROS 2 and Gazebo simulation of a 4-wheel skid-steer rover, built to prototype the autonomy stack before the physical rover has wheels and lidar. Not yet deployed to hardware.
 
-#### Chassis
+**What I built:** the rover model and world in SDF, the ROS-Gazebo bridge and launch files, a tuned Nav2 configuration, waypoint-loop and teleop scripts, and a one-command startup and shutdown system.
+
+**Stack:** ROS 2 (Lyrical), Gazebo, slam_toolbox, Nav2, RViz, Python (rclpy).
+
+**Simplifications:** noise-free Gazebo odometry and a fixed map-to-odom transform in place of AMCL localization, which is not representative of real hardware. Adding sensor noise, GPS dropout, and an EKF is the next step before porting to the physical rover.
+
+https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55
+
+*slam_toolbox building an occupancy grid from 2D lidar as the rover drives a walled room, visualized in RViz. The saved map is reused for navigation.*
+
+The navigation loop uses a custom Python script that sends Nav2 waypoint goals continuously, switching to the next waypoint as the rover approaches the current one so motion stays smooth instead of stopping at each point.
+
+---
+
+## Build Log
+
+### Fabrication
+
+Fabricated in Villanova's machine shop using an angle grinder, drill press, lathe, 3D printer (PETG), and soldering iron. Lock nuts are used throughout to handle vibration.
+
+**Chassis**
 
 https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
@@ -69,98 +159,44 @@ https://github.com/user-attachments/assets/ddc288d6-379b-4fef-987a-e665b07f313f
 
 <img src="assets/ROVERwithLID2.jpeg" width="40%" />
 
-*Completed chassis with lid attached, ready for component mounting.*
+*Completed chassis with lid, ready for component mounting.*
 
-#### Motor Mounting
+**Motor Mounting**
 
 <img src="assets/MotorMounting.jpeg" width="40%" />
 
-*Mounting holes were drilled with a  drill press directly into the aluminum chassis, and the motors were bolted to the chassis.*
+*Mounting holes drilled into the aluminum chassis with a drill press; motors bolted in place.*
 
-#### Battery Holder & ESC Mounts
+**Battery Holder and ESC Mounts**
 
- <img src="assets/ESC&BatteryMount.jpeg" width="39%" />
+<img src="assets/ESC&BatteryMount.jpeg" width="39%" />
 
-*The 3D-printed PETG battery holder and ESC mounts. Mounting holes were drill pressed and the parts secured to the bottom plate of the chassis.*
+*3D-printed PETG battery holder and ESC mounts, secured to the bottom plate.*
 
-The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit tolerance to seat the ESCs securely while allowing for removal.
+The battery mount uses #10 bolts (24 TPI, 1.5" length) into the PETG mount. The ESC mounts use a sliding fit to seat the ESCs securely while allowing removal.
 
 <img src="assets/IMG_1199.jpeg" width="39%" />
 
-*Chassis with the ESC mounts installed and ESCs seated in place, ready for wiring.*
+*ESC mounts installed with ESCs seated, ready for wiring.*
 
-#### Wheel Attachment
+### Electronics and Testing
 
-Driving a wheel directly off the motor's output shaft was the first option considered, but analysis showed it wasn't a safe long-term solution: with the wheel mounted straight onto the motor shaft, the calculated factor of safety against shaft fatigue came out to roughly 0.9, right at or below the failure threshold. The current design instead uses a coupler to connect the motor shaft to a separate drive shaft, with a dedicated outboard support bearing near the wheel. The bearing intercepts the bending load before it reaches the motor shaft or the motor's internal bearings, rather than relying on the motor shaft to carry that load alone. In this design, the same analysis puts the calculated factor of safety at roughly 3 under worst-case loading, a solid margin for a 50 lb, 4-wheel platform. As part of this analysis, the motor was disassembled to directly inspect its internals and characterize the actual load it could handle, rather than relying solely on manufacturer specs.
-
-Before trusting this under full driving load, the plan is to validate it with a static side-load bench test, then a powered on-stand run test, confirming the calculated design holds up under real conditions.
-
-## Electronics & Testing
-
-#### Wiring
+**Wiring**
 
 <img src="assets/IMG_1206.jpeg" width="39%" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/WiringRover.JPEG" width="33.51%" />
 
-*The ESCs were soldered together and wired in parallel. This wiring was done without PWM signal splitting, a simpler approach that works for this stage of testing but isn't the most refined method; it's a known area for cleanup in a later iteration.*
+*ESCs soldered together and wired in parallel without PWM signal splitting. Simple and sufficient for this stage; planned for cleanup in a later iteration.*
 
-#### ESC Configuration
+**ESC Configuration**
 
 <img src="assets/IMG_1217.jpeg" width="60%" />
 
-*ESC Configuration taking place using VESC Tool Software.*
+*ESC configuration in VESC Tool.*
 
 https://github.com/user-attachments/assets/366e0a16-83fd-4b0e-9b47-df85c3f6d8a7
 
-*ESC Configuration Test: a single motor spinning during a VESC Tool test, confirming the ESC is configured and responding correctly before testing the full drivetrain.*
+*Single motor spinning during a VESC Tool test, confirming ESC configuration before full drivetrain testing.*
 
-#### Full Drive Train Test
+**Full Drivetrain Test**
 
-All ESCs were soldered together, with their ground and signal wires tied to a single receiver's pins, to test simple forward/back motion using a receiver and transmitter to control the motors.
-
-https://github.com/user-attachments/assets/157501a2-3318-4a4c-9c09-36679b82e03b
-
-*Full drivetrain demo: all motors turning together under receiver/transmitter control, confirming the drivetrain responds correctly across every motor.*
-
-Controller responsiveness was confirmed through this test before moving on to sensing and autonomy.
-
-## Autonomy Simulation
-
-Before the physical rover has wheels and a lidar mounted, I built a ROS 2 and Gazebo simulation of a 4-wheel skid-steer rover to prototype the first layers of its autonomy software stack. This is a simulation only and has not yet been deployed to the physical rover.
-
-#### SLAM Mapping
-
-https://github.com/user-attachments/assets/cc7eb8e0-4998-4710-9b85-dd4986cdbb55
-
-*The simulated rover driving through a walled room with obstacles while slam_toolbox builds an occupancy grid map from its 2D lidar scan, visualized live in RViz. The map was then saved and reused for navigation.*
-
-#### Autonomous Navigation Loop
-
-https://github.com/user-attachments/assets/332fc901-cb11-4860-a606-da57c717b929
-
-*The rover autonomously navigating a figure-8 route around both obstacles using Nav2 on the saved map. A custom Python script sends waypoint goals in a continuous loop, switching to the next waypoint as the rover approaches the current one so the motion stays smooth instead of stopping at each point. Gazebo (left) and RViz (right) are shown together.*
-
-**What I built:** the rover model and world in SDF, the ROS-Gazebo bridge and launch files, a tuned Nav2 configuration, the waypoint-loop and teleop scripts, and a one-command startup and shutdown system.
-
-**Stack:** ROS 2 (Lyrical), Gazebo, slam_toolbox, Nav2, RViz, Python (rclpy).
-
-**Simplifications:** the simulation uses noise-free odometry from Gazebo and a fixed map-to-odom transform in place of AMCL localization, which is not representative of real hardware. Adding sensor noise, GPS dropout, and an EKF is the next step before porting this to the physical rover.
-
-## Status
-
-The rover is under active development. Chassis fabrication and core drivetrain electronics (motors, wiring, ESCs) are complete and tested. In parallel, I set up SLAM mapping and Nav2 navigation on a simulated rover in Gazebo as a first testbed for the autonomy software. The autonomy stack will continue to be built out, starting with attaching the wheels, integrating LiDAR, and porting and extending the simulated autonomy on the physical rover.
-
-## Future Work
-
-- **Wheel installation** and full drivetrain assembly with the drive shaft, coupler, and outboard bearing
-- **Validation testing** of the wheel drive assembly: static side-load bench test followed by a powered on-stand run test
-- **Ansys FEA** of the drive shaft and coupler, confirming the hand-calculated factor of safety against simulation
-- **LiDAR integration** for terrain and obstacle sensing
-- **Raspberry Pi optical detection** for basic obstacle/object recognition
-- **Sensor noise, GPS dropout, and EKF state estimation** in simulation, to test robustness before hardware
-- **Port the ROS 2 navigation stack** from simulation to the physical rover
-- **Autonomous navigation** for the rover within the broader heterogeneous robot team
-- **Wiring cleanup**, moving from the current parallel ESC wiring to a proper PWM-split configuration
-- **Gear reduction** between the motor and drive shaft, a possible improvement for better torque control
-- **Legged robot autonomy**, extending this work to a second platform type in the broader research program
-- **Physical connection mechanism**, developing an arm that lets robots autonomously connect and push or pull each other
-- **Field testing** of pull/tow capability with other team members
+All ESC ground and signal wires were tied to a single receiver to test forward and backward motion with a transmitter. This confirmed controller responsiveness across every motor before moving on to sensing and autonomy (see the demo video under Demos).
